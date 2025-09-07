@@ -13,7 +13,7 @@ set sts=4
 set sw=4
 set hidden
 set laststatus=2
-
+set noswapfile
 
 augroup cursorline_always
 	au!

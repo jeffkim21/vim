@@ -1,3 +1,4 @@
+colorscheme elflord
 set number
 cs add ./cscope.out
 set cst
@@ -5,6 +6,7 @@ set cst
 nnoremap <c-\> :cs find c <c-r>=expand("<cword>")<cr><cr>
 nnoremap <c-l> :bnext<cr>
 nnoremap <c-h> :bprev<cr>
+map <c-s> <esc>:w %<cr>
 noswapfile
 filetype plugin on
 set nocompatible
@@ -38,7 +40,13 @@ Plug 'prabirshrestha/vim-lsp'
 Plug 'prabirshrestha/asyncomplete.vim'
 Plug 'prabirshrestha/asyncomplete-lsp.vim'
 Plug 'krzbe/vim-lsp-inactive-regions'
+Plug 'jpalardy/vim-slime'
 call plug#end()
 
 so ~/.vim/my_lsp.vim
 so ~/.vim/my_completion.vim
+
+packadd! termdebug
+so ~/.vim/my_termdebug.vim
+
+so ~/.vim/my_slime.vim
